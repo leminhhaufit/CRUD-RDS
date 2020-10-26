@@ -1,0 +1,30 @@
+extends layout
+block content
+    h1 #{title}
+    p Wellcome to #{title}
+    ul.nav
+        li.nav.item 
+            a(href='/' id="a") Trang chu
+        li.nav.item 
+            a(href='/suasv' id="a") Sua sinh vien
+    body
+        form(action="/themsv", method="post")
+            .row
+                .col-md-4
+                    label(for="ho") HO SV:
+                    input.form-control(type="text" name="ho")
+                .col-md-6
+                    label(for="ten") TEN SV:
+                    input.form-control(type="text" name="ten" )
+                .col-md-10
+                    label(for="lop") LOP:
+                    select.form-control(name="lop")
+                        option(value="LOP A") LOP A
+                        option(value="LOP B") LOP B
+                        option(value="LOP C") LOP C
+                    label(for="email") Email:
+                    input.form-control(type="text" name="email" ) 
+                    input.form-control.btn.btn-primary(type="submit" value="Submit")
+                    if message
+                        h2 #{message}       
+                                    

@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul.nav
+    li.nav.item 
+      a(href='/themsv' id="a") Them sinh vien
+    li.nav.item 
+      a(href='/suasv' id="a") Sua sinh vien
+      
+  body
+  form(action="/timsv" method="get")
+    .row
+      .col-md-6
+        input.form-control(type="text" name="tim")
+      .col-md-4
+        input.btn.btn-primary(type="submit" value="Tim")
+  .row
+    .col-md-10
+      table.table
+        thead.thead-dark
+          tr
+            th Ma so
+            th HO
+            th Ten
+            th Lop
+            th email
+            th action
+        each val in result
+          tr
+            th= val.massv
+            th= val.ho
+            th= val.ten
+            th= val.lop
+            th= val.email
+            th
+              a.btn.btn-primary(href='/suasv/'+val.massv) Sua
+              a.btn.btn-primary(href='/xoasv/'+val.massv) Xoa
+            
+          
+          
