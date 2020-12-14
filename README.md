@@ -1,2 +1,2 @@
-# CRUD-RDS
-them-xoa-sua-tim kiem bằng nodes với pug(jade) csdl là mysql
+# CRUD-RDS-NODEJS
+them-xoa-sua-tim kiem bằng nodejs với pug(jade) csdl là mysql
